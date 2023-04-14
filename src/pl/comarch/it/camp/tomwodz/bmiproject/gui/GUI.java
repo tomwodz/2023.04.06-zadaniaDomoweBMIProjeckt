@@ -15,7 +15,7 @@ public class GUI {
         System.out.println("3. Exit");
         System.out.println("---------");
         System.out.println("Select options: ");
-        return scanner.nextLine();
+        return scanner.next();
     }
 
     public boolean showExit(){
@@ -84,18 +84,20 @@ public class GUI {
 
     public String showMenuReturnBmi(){
         System.out.println("Please write your unique ID:");
-        return scanner.nextLine();
+        return scanner.next();
     }
     public String giveName(){
         System.out.println("Please give your name:");
-        return scanner.nextLine();
+        return scanner.next();
     }
 
-    public void giveHeight(String name) {
+    public double giveHeight(String name) {
         System.out.println(name + " please give your height [cm]:");
+        return scanner.nextDouble();
     }
-    public void giveWeight(String name) {
+    public double giveWeight(String name) {
         System.out.println(name + " please give your weight [cm]:");
+        return scanner.nextDouble();
     }
 
 }

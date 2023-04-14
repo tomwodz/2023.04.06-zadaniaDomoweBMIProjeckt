@@ -17,16 +17,13 @@ public class UserOperations {
 
     public void createNewUser(){
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         //name = "Tomek" ; height =180; weight = 90;
-
         name = gui.giveName();
         uniqueID = ID.advanceId(name);
         nextID = ID.nextID();
-        gui.giveHeight(name);
-        height = scanner.nextDouble();
-        gui.giveWeight(name);
-        weight = scanner.nextDouble();
+        height = gui.giveHeight(name);
+        weight = gui.giveWeight(name);
         bmiRes = bmi.bmiCalculate(weight, height);
         descriptionBmi = bmi.descriptonBmi(bmiRes);
         users.setUsers(uniqueID, name, height, weight, bmiRes, descriptionBmi, false, nextID);
